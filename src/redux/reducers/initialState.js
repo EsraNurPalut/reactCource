@@ -1,0 +1,6 @@
+//baslangıc
+
+export default {
+currentCategory:{}
+
+}

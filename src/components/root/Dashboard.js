@@ -1,0 +1,22 @@
+import React, { Component } from "react";
+import { Row, Col } from "reactstrap";
+import CategoryList from "../categories/CategoryLList";
+import ProductList from "../products/ProductList";
+
+export default class componentName extends Component {
+  render() {
+    return (
+      <div>
+        <Row>
+          <Col xs={3}>
+            <CategoryList />
+          </Col>
+
+          <Col xs={9}>
+            <ProductList />
+          </Col>
+        </Row>
+      </div>
+    );
+  }
+}
