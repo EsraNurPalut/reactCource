@@ -1,6 +1,6 @@
 //baslangıc
 
 export default {
-currentCategory:{}
+currentCategory:{categoryName:"Beverages"}
 
 }
