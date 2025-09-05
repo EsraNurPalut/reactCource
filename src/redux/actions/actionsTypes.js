@@ -1,5 +1,5 @@
 export const CHANGE_CATEGORY="CHANGE_CATEGORY"
 export const GET_CATEGORIES_SUCCESS ="GET_CATEGORIES_SUCCESS"
 
-
+export const GET_PRODUCTS_SUCCESS="GET_PRODUCTS_SUCCESS"
 //state:yönetilmesi gereken data

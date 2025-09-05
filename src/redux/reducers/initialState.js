@@ -2,5 +2,6 @@
 
 export default {
 currentCategory:{},
-categories:[]
+categories:[],
+product:[]
 }
