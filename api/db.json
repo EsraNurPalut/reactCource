@@ -6,5 +6,48 @@
     { "id": 4, "name": "Ev & Yaşam" },
     { "id": 5, "name": "Spor" },
     { "id": 6, "name": "Oyuncak" }
+  ],
+
+  "products": [
+    {
+      "id": 1,
+      "productName": "iPhone 13",
+      "unitPrice": 25000,
+      "quantityPerUnit": "1 adet",
+      "unitInStock": 10,
+      "categoryId": 2
+    },
+    {
+      "id": 2,
+      "productName": "Samsung Galaxy S22",
+      "unitPrice": 23000,
+      "quantityPerUnit": "1 adet",
+      "unitInStock": 15,
+      "categoryId": 1
+    },
+    {
+      "id": 3,
+      "productName": "Dell XPS 13",
+      "unitPrice": 40000,
+      "quantityPerUnit": "1 adet",
+      "unitInStock": 5,
+      "categoryId": 6
+    },
+    {
+      "id": 4,
+      "productName": "Logitech MX Master 3",
+      "unitPrice": 2500,
+      "quantityPerUnit": "1 adet",
+      "unitInStock": 25,
+      "categoryId": 1
+    },
+    {
+      "id": 5,
+      "productName": "Sony WH-1000XM5",
+      "unitPrice": 9000,
+      "quantityPerUnit": "1 adet",
+      "unitInStock": 8,
+      "categoryId": 5
+    }
   ]
 }
