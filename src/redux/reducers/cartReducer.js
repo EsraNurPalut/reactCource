@@ -29,8 +29,10 @@ export default function cartReducer(state = initialState.cart, action) {
           },
         ];
       }
-
-    default:
+ case actionTypes.REMOVE_FROM_CART:
+  const newState2 =state.filter(cartItem=>cartItem.product.id !=action.payload.id)
+return newState2;
+  default:
       return state;
   }
 }

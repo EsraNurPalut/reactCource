@@ -36,7 +36,7 @@ function Navi() {
             </NavItem>
            <CartSummary/>
           </Nav>
-          <NavbarText>Simple Text</NavbarText>
+ 
         </Collapse>
       </Navbar>
     </div>
