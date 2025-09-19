@@ -1,20 +1,19 @@
-import React, { Component } from "react";
+import React from "react";
 import { Container } from "reactstrap";
 import Navi from "../navi/Navi";
 import Dashboard from "./Dashboard";
-import { Routes,Route } from "react-router-dom";
-import CartDetail from "../cart/CartDetail"
+import { Routes, Route } from "react-router-dom";
+import CartDetail from "../cart/CartDetail";
 
 function App() {
   return (
     <Container>
       <Navi />
       <Routes>
-        <Route path="/" exact componet={Dashboard}/>
-          <Route path="/product" exact componet={Dashboard}/>
-            <Route path="/cart" exact componet={CartDetail}/>
+        <Route path="/" element={<Dashboard />} />
+        <Route path="/product" element={<Dashboard />} />
+        <Route path="/cart" element={<CartDetail />} />
       </Routes>
-      <Dashboard/>
     </Container>
   );
 }

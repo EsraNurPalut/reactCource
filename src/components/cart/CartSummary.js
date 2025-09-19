@@ -2,8 +2,7 @@ import React, { Component } from "react";
 import { connect } from "react-redux";
 import { bindActionCreators } from "redux";
 import * as cartActions from "../../redux/actions/cartActions";
-
-
+import { Link } from "react-router-dom";
 import {
   UncontrolledDropdown,
   DropdownToggle,
@@ -13,7 +12,6 @@ import {
   NavLink,
   Badge,
 } from "reactstrap";
-
 
 class CartSummary extends Component {
   renderEmpty() {
@@ -27,20 +25,29 @@ class CartSummary extends Component {
   renderSummary() {
     return (
       <UncontrolledDropdown nav inNavbar>
-        <DropdownToggle nav caret>
+        <DropdownToggle nav caret>F
           Sepetiniz
         </DropdownToggle>
         <DropdownMenu right>
           {this.props.cart.map((cartItem) => (
             <DropdownItem key={cartItem.product.id}>
-               <Badge color="danger" onClick={()=>this.props.actions.removeFromCart(cartItem.product)}>-</Badge>
+              <Badge
+                color="danger"
+                onClick={() =>
+                  this.props.actions.removeFromCart(cartItem.product)
+                }
+              >
+                -
+              </Badge>
               {cartItem.product.productName}
               <Badge color="success">{cartItem.quantity}</Badge>
             </DropdownItem>
           ))}
 
           <DropdownItem divider />
-          <DropdownItem>Reset</DropdownItem>
+      <DropdownItem tag={Link} to="/cart">
+    Sepete git
+  </DropdownItem>
         </DropdownMenu>
       </UncontrolledDropdown>
     );
@@ -54,12 +61,11 @@ class CartSummary extends Component {
   }
 }
 
-
 function mapDispatchToProps(dispatch) {
   return {
-    actions:{
-      removeFromCart:bindActionCreators(cartActions.removeFromCart,dispatch)
-    }
+    actions: {
+      removeFromCart: bindActionCreators(cartActions.removeFromCart, dispatch),
+    },
   };
 }
 
@@ -68,4 +74,4 @@ function mapStateToProps(state) {
     cart: state.cartReducer,
   };
 }
-export default connect(mapStateToProps,mapDispatchToProps)(CartSummary);
+export default connect(mapStateToProps, mapDispatchToProps)(CartSummary);
